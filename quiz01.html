@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function init(){
+            let name = prompt("당신의 이름은?")
+            let age = prompt("당신의 나이는?")
+            let address = prompt("당신의 주소는?")
+
+            document.getElementById("div1").innerHTML = `
+                <b>이름</b> : ${name}<br>
+                <b>나이</b> : ${age - 1}<br>
+                <b>주소</b> : ${address}<br>            
+            `
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
