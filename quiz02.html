@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function init(){
+            let addeven = prompt("수(짝/홀) 입력")
+            let baesu3 = prompt("수(3의 배수) 입력")
+            let firstNum = prompt("수(첫번째 수 입력) 입력")
+            let secondNum = prompt("수(두번째 수 입력) 입력")
+
+
+            // 홀짝 console.log("num1 % num 2 : ", ( num1 % num2 ))
+            // 3의 배수 console.log(`num1 / num2 : ${ num1 / num2 }`)
+            // 두 수 중에서 큰 수
+
+            document.getElementById("div1").innerHTML = `
+                <b>짝/홀</b> : ${addeven};
+                <b>3의 배수</b> ${baesu3};
+                <b>큰 수</b> $
+            `
+        }
+    </script>
+</head>
+<body onload="init()">
+    <div id="div1"></div>
+</body>
+</html>

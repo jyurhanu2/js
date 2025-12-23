@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function init(){
+            let num1 = prompt("수 입력");//20;
+
+            let result = ( num1 % 2 == 0 ) ? " : 짝수" : " : 홀수";
+            console.log( num1 + result )
+            document.write(num1 + result)
+
+            let num2 = prompt( "--- 3의 배수 확인 ---" );
+
+            let result2 = (num2 % 3 == 0) ? "3의 배수" : "아님";
+            document.write( result2 )
+            
+            let n1 = 10, n2 = 20;
+            let result3 = (n2 > n2) ? "n1이 n2보다 크다" : "n2가 크다";
+            document.write( result3 )
+        }
+    </script>
+</head>
+<body onload="init()">
+    
+</body>
+</html>
