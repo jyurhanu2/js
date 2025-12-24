@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let saveId = "aaa", savePwd = "111";
+        let inputId = "aaa", inputPwd = "111";
+
+        let msg;
+        if( inputId.length > 3 ){ // 4자 이상 입력시
+            msg = "가입 가능"
+        }else{ // 3자 이하 입력시
+            msg = "길이가 짧습니다"
+        }
+        if( inputId = "Javascript"){ // Javascript 입력시
+            msg = "존재하는 아이디 입니다"
+        }
+
+        console.log( msg )
+        function input(){
+            console.log("내용이 입력 될 때마다 실행")
+        }
+
+        if( txt2 !== txt3 ){ // 비밀번호 검증
+            msg = "비밀번호 일치하지 않음"
+        }else{
+            msg = "일치합니다"
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="txt1"><br>
+    <input type="text" id="txt2"><br>
+    <input type="text" id="txt3"><br>
+    <button onclick="bnt()">클릭</button>
+</body>
+</html>
