@@ -50,8 +50,32 @@
             let sum = 0;
             sum = a1 + a2;
             return sum;
-        }        
+        }
 
+        function testFunc01(x, y, z){
+            document.write(`<hr>매개변수 : ${x}, ${y} , ${z}` )
+            return "돌려 준다!!!"
+        }
+        testFunc01(10, 20, 30);
+        testFunc01(10, 20);
+        const result = testFunc01(10, 20, 30, 40);
+        document.write(`<hr>return : ${result}`)
+
+        function testFunc02( n ){
+            document.write(`<hr>111 : ${n}`)
+            if( n == undefined )
+                return "n값이 없습니다";
+            document.write(`<hr>222`)
+            return n * 20;
+        }
+        let re = testFunc02( 12345 );
+        document.write(`<hr>결과 값 : ${re}`)
+
+        function testFunc03(){
+            return 100; // return 값을 여러개로 둘 수 없다
+        }
+        re = testFunc03();
+        document.write(`<hr>testFunc03 결과 값 : ${re}`)
     </script>
 </head>
 <body>
