@@ -10,12 +10,42 @@
             { 'id' : 'bbb','name' : '김개똥', 'age' : 30 },
             { 'id' : 'ccc', 'name' : '고길동', 'age' : 40 }
         ]
+        const info = ( username ) => {
+            //alert("실행? " + username )
+            let user = userInfo.filter( (u) => (u.id === username )? u : undefined )
+            //console.log( user )
+            if( user.length != 0 ){
+                document.getElementById("table").innerHTML = `
+                    아이디 : ${user[0]["id"]}<br>
+                    이름 : ${user[0]["name"]}<br>
+                    나이 : ${user[0]["age"]}<br>
+                `;
+            }
+        }
+/*
+        <tr>
+            <td>${userImfo[0]['id']}</td>
+            <td onclick="info( '${userInfo[0]['id']}' )">${userinfo[0]['name']}</td>
+            <td>${user['age']}</td>
+        </tr>        <tr>
+            <td>${user['id']}</td>
+            <td onclick="info( '${user['id']}' )">${user['name']}</td>
+            <td>${user['age']}</td>
+        </tr>        <tr>
+            <td>${user['id']}</td>
+            <td onclick="info( '${user['id']}' )">${user['name']}</td>
+            <td>${user['age']}</td>
+        </tr>
+*/                
+
         const allUser = () => {
             let msg = "";
             userInfo.forEach( ( user ) => {
                 msg += `
         <tr>
-            <td>${user['id']}</td><td>${user['name']}</td><td>${user['age']}</td>
+            <td>${user['id']}</td>
+            <td onclick="info( '${user['id']}' )">${user['name']}</td>
+            <td>${user['age']}</td>
         </tr>
                 `;
             } )
