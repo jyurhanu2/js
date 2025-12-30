@@ -32,11 +32,7 @@
             */
             document.getElementById("table").innerHTML = table
         }
-        userInfo = [
-            { 'id' : 'aaa', 'name' : '홍길동', 'age' : 20 },
-            { 'id' : 'bbb','name' : '김개똥', 'age' : 30 },
-            { 'id' : 'ccc', 'name' : '고길동', 'age' : 40 }
-        ]        
+
         const getUser = () => {
             let msg = ""
             const uId = document.getElementById("u_id")
@@ -81,18 +77,18 @@
             */
             // 변수 = (조건식) ? 참인경우 : 거짓인경우
             let result = userInfo.filter( (user) =>
-                ( user['id'] == uId.value ) ? user : undefined)            
+                ( user['id'] == uId.value ) ? user : undefined )            
             //console.log( result )
             //console.log( result[0] )
             //console.log( result[0]['id'] )
-            if(result.length != 0){
+            if(result.length != 0 ){
                 result = result[0]
                 //console.log( result )
                 msg += `
                         <tr>
-                            <td>${user['id']}</td>
-                            <td>${user['name']}</td>
-                            <td>${user['age']}</td>
+                            <td>${result['id']}</td>
+                            <td>${result['name']}</td>
+                            <td>${result['age']}</td>
                     </tr>
                     `;
             }else{
@@ -100,7 +96,6 @@
             }
 
             const table = tableCreate( msg );
-
             /*
             let table = `
                 <table border="1">
@@ -123,6 +118,20 @@
                 </table>
             `;
             return table;
+        }     
+
+        const userDelete = () => {
+            const delId = document.getElementById("del_id");
+            /*
+            userInfo = userInfo.filter( (user) => {
+                if( user['id'] !== delId.value ){
+                    return user;
+                }
+            } );
+            */
+            userInfo = userInfo.filter( (user) =>
+                ( user['id'] !== delId.value ) ? user : undefined );
+            allUser();
         }
     </script>
 </head>
